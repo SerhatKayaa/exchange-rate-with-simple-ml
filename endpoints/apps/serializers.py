@@ -3,6 +3,7 @@ from apps.models import Endpoint
 from apps.models import MLAlgorithm
 from apps.models import MLAlgorithmStatus
 from apps.models import MLRequest
+from apps.models import ExchangeData
 
 class EndpointSerializer(serializers.ModelSerializer):
     class Meta:
@@ -52,3 +53,8 @@ class MLRequestSerializer(serializers.ModelSerializer):
             "created_at",
             "parent_mlalgorithm",
         )
+
+class ExchangeDataSerializer(serializers.ModelSerializer):
+    model = ExchangeData
+    read_only_fields = ("created_at")
+    fields = created_at

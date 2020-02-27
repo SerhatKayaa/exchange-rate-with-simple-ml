@@ -71,3 +71,6 @@ class MLRequest(models.Model):
     feedback = models.CharField(max_length=10000, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True, blank=True)
     parent_mlalgorithm = models.ForeignKey(MLAlgorithm, on_delete=models.CASCADE)
+
+class ExchangeData(models.Model):
+    created_at = models.DateTimeField(auto_now_add=True, blank=True)
